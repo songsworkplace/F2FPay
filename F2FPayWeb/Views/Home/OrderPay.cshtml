@@ -1,0 +1,137 @@
+﻿@model Beefun.F2FPay.Domain.OrderPayDTO
+
+@{
+    ViewBag.Title = "OrderPay";
+}
+
+<h2>OrderPay<span style="font-size: 15px; color: gray;font-weight:normal ">(仅支持支付宝)</span></h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>OrderPayDTO</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OperatorId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OperatorId)
+                @Html.ValidationMessageFor(model => model.OperatorId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OutTradeNo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OutTradeNo)
+                @Html.ValidationMessageFor(model => model.OutTradeNo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TotalAmount, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TotalAmount)
+                @Html.ValidationMessageFor(model => model.TotalAmount)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Body, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Body)
+                @Html.ValidationMessageFor(model => model.Body)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuthCode, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AuthCode)
+                @Html.ValidationMessageFor(model => model.AuthCode)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StoreId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StoreId)
+                @Html.ValidationMessageFor(model => model.StoreId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TerminalId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TerminalId)
+                @Html.ValidationMessageFor(model => model.TerminalId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.Raw(ViewData["resultMsg"])
+</div>
+<div>
+    
+    @Html.ActionLink("Back to List", "Index")
+
+</div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <span class="control-label col-md-2">退款单号</span>
+        <div class="col-md-10">
+            <input name="outRefundNo"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="control-label col-md-2">支付单号</span>
+        <div class="col-md-10">
+            <input name="onlineTradeNo" value="@(ViewData["OnlineTradeNo"])"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="退款" onclick="onRefundClick()" class="btn btn-default"/>
+        </div>
+    </div>
+</div>
+<div id="refund_reuslt"></div>
+@section Scripts {
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+
+    <script>
+        function onRefundClick() {
+            var dto = new Object();
+            dto.OnlineTradeNo= $("input[name='onlineTradeNo']").val();
+            dto.OutRefundNo = $("input[name='outRefundNo']").val();
+            dto.OutTradeNo = $("input[name='OutTradeNo']").val();
+            dto.RefundFee = $("input[name='TotalAmount']").val();
+            dto.TotalFee = $("input[name='TotalAmount']").val();
+            dto.RefundReason = "退款测试";
+            $("input[type='submit']").attr("disabled", "disabled");
+            $.get("/home/refundorder",dto,function(data) {
+                $("#refund_reuslt").html(data);
+                $("input[type='submit']").removeAttr("disabled");
+            });
+        }
+    </script>
+}

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>回调页</h2>
+<div class="form-horizontal">
+    <div>
+        Query:@ViewData["Querys"]
+    </div>
+    <div>
+        Form:@ViewData["Forms"]
+    </div>
+    <div>
+        HostUrl:@ViewData["HostUrl"]
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="下一步" class="btn btn-default" onclick="getauth()"/>
+        </div>
+    </div>
+</div>
+<div>
+    授权：<span id="resultMsg"></span>
+</div>
+
+<script>
+    function getauth() {
+        $.post("/home/alipayCallback?@Html.Raw(ViewData["Querys"])", { rd: Math.random() }, function (data) {
+            $("#resultMsg").html(data);
+        });
+    }
+</script>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<alipay>
+  <!--此处请填写你当面付的APPID-->
+  <appid value="2016052501441139"/>
+  <!--此处请填写你的PID（partner）-->
+  <pid value="2088102584577711"/>
+  <redirectUri value="11"/>
+  <charset value="utf-8"/>
+  <sign_type value="RSA"/>
+  <version value="1.0"/>
+  <serverUrl value="https://openapi.alipay.com/gateway.do"/>
+  <!--支付宝公钥-->
+  <alipay_rsa_public_key>
+    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDI6d306Q8fIfCOaTXyiUeJHkrIvYISRcc73s3vF1ZT7XN8RNPwJxo8pWaJMmvyTn9N4HQ632qJBVHf8sxHi/fEsraprwCtzvzQETrNRwVxLO5jVmRGi60j8Ue1efIlzPXV9je9mkjzOmdssymZkh2QhUrCmZYI/FCEa3/cNMW0QIDAQAB 
+  </alipay_rsa_public_key>
+  <!--rsa本地私钥，记得在支付宝应用平台配置公钥-->
+  <rsa_private_key>
+    MIICXQIBAAKBgQDH8fgQKMI4DA51zLVmwhRyQCSfAsn1yvodReFVQkNw9AiXxmi4
+    dobe2kX0e7t1dskzKdzTFtIMIGnlDHqKOf5nvlRykEVSYhGRphdzELQ2XPQViq/I
+    iF3Nw+LCOLA8yro3l/iaxeFFZKhtV3GKFhFqPRpzTqcpT9xB5CD5MKBy/wIDAQAB
+    AoGBAJlF3TKN/Cy42VDmZ1zphID8uNYIbkd0nP1Zt14DWO26tOecWmSlv8gQLTY4
+    r8BhGeWVvsk2ojhXlLXYNgvGX0VOnFxa5QNCY/crNRt3fNUpvd2UpxiRKb2DKcMM
+    9v1CeoB/gdKfz431iaa/zZK/I5FVKurVXVOScX1PYUj8h4yBAkEA7rqaugTRLddK
+    YiGIxsZ4uurPQQHDtS3KM5eLIPPUXu+Hb6TH6LpWCV4tkmQVwkq2bS1bRfipu9Tf
+    l7vi3IW+QQJBANZpEVrwzY9nIJvqQ1uK9Avgr6XUvVEEjgnJrtD1ELEs3GM92w89
+    yPcu2nyGThIU4Jli3pWOEevSRKxKtdagYT8CQAk/q3zncN8wxw30NKNWzxiWvj7L
+    fbSIOJw1E8vMBn9DEmEt5hzLE0g7oNJaFEm5sUWbizyzvIetYJg1TD205MECQQDN
+    5qhcBNPi2s5d7GIzDwW+Qk9rmRkVLKKak6vlzvHws3wRcd1kjZjoh34aB4ABrTrj
+    Eidex8g+Bvcb3cMyEWJRAkA7X4Qx07Jsfnphl0mpkq0/loBbjCCd+0IFUlz7A6nT
+    CobI3r9qkVhPib3HXSzvfT7/oKATjX40Y/Ytut0fR/EY
+  </rsa_private_key>
+</alipay>

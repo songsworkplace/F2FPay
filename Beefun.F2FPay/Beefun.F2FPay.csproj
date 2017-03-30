@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13AF223C-0AFE-40B6-A5FC-55E191B421B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Beefun.F2FPay</RootNamespace>
+    <AssemblyName>Beefun.F2FPay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AES.cs" />
+    <Compile Include="AliPay\AlipayAuthService.cs" />
+    <Compile Include="AliPay\AlipayClient.cs" />
+    <Compile Include="AliPay\AlipayConfig.cs" />
+    <Compile Include="AliPay\AliPayTradeService.cs" />
+    <Compile Include="AliPay\Domain\AlipayDTO.cs" />
+    <Compile Include="AliPay\Domain\AlipayTradeBarcodeDTO.cs" />
+    <Compile Include="AliPay\Domain\AlipayTradeQueryDTO.cs" />
+    <Compile Include="AliPay\Domain\AlipayTradeRefundDTO.cs" />
+    <Compile Include="AliPay\Domain\AlipayTradeRefundQueryDTO.cs" />
+    <Compile Include="AliPay\Domain\OpenAuthTokenAppDTO.cs" />
+    <Compile Include="AliPay\Model\ExtendParams.cs" />
+    <Compile Include="AliPay\Model\GoodsInfo.cs" />
+    <Compile Include="AliPay\Model\PayResultModel.cs" />
+    <Compile Include="AliPay\Model\ResultEnum.cs" />
+    <Compile Include="AliPay\Model\TradeInfo.cs" />
+    <Compile Include="AliPay\Model\TradeStatusModel.cs" />
+    <Compile Include="Domain\BaseDTO.cs" />
+    <Compile Include="Domain\DTO\OrderPayDTO.cs" />
+    <Compile Include="Domain\Result\OrderPayResult.cs" />
+    <Compile Include="Domain\BaseResult.cs" />
+    <Compile Include="Domain\DTO\OrderQueryDTO.cs" />
+    <Compile Include="Domain\DTO\RefundDTO.cs" />
+    <Compile Include="Domain\DTO\RefundQueryDTO.cs" />
+    <Compile Include="Domain\Result\OrderQueryResult.cs" />
+    <Compile Include="Domain\Result\RefundQueryResult.cs" />
+    <Compile Include="Domain\Result\RefundResult.cs" />
+    <Compile Include="F2FPayException.cs" />
+    <Compile Include="IF2FTradeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadXmlConfigHelper.cs" />
+    <Compile Include="Weixin\WeixinConfig.cs" />
+    <Compile Include="Weixin\WeixinTradeService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AliPay\alipayconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AopSDK\AopSdk.csproj">
+      <Project>{9c11cae5-5188-4e71-825b-68fc3135728a}</Project>
+      <Name>AopSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeiXinPaySDK\WeiXinPaySDK.csproj">
+      <Project>{9e8f8b10-0799-4794-bef3-c096044b9edd}</Project>
+      <Name>WeiXinPaySDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AliPay\RSAkey\alipay_rsa_public_key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AliPay\RSAkey\rsa_private_key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="AliPay\RSAkey\rsa_public_key.pem" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
