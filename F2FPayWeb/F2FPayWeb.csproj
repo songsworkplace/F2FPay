@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -195,9 +196,9 @@
       <Project>{9c11cae5-5188-4e71-825b-68fc3135728a}</Project>
       <Name>AopSdk</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Beefun.F2FPay\Beefun.F2FPay.csproj">
+    <ProjectReference Include="..\Beefun.F2FPay\Common.F2FPay.csproj">
       <Project>{13af223c-0afe-40b6-a5fc-55e191b421b9}</Project>
-      <Name>Beefun.F2FPay</Name>
+      <Name>Common.F2FPay</Name>
     </ProjectReference>
     <ProjectReference Include="..\WeiXinPaySDK\WeiXinPaySDK.csproj">
       <Project>{9e8f8b10-0799-4794-bef3-c096044b9edd}</Project>
