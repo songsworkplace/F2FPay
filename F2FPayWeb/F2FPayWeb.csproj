@@ -196,7 +196,7 @@
       <Project>{9c11cae5-5188-4e71-825b-68fc3135728a}</Project>
       <Name>AopSdk</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Beefun.F2FPay\Common.F2FPay.csproj">
+    <ProjectReference Include="..\Common.F2FPay\Common.F2FPay.csproj">
       <Project>{13af223c-0afe-40b6-a5fc-55e191b421b9}</Project>
       <Name>Common.F2FPay</Name>
     </ProjectReference>
