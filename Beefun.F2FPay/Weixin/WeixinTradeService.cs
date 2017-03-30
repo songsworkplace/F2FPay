@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
-using Beefun.F2FPay.Domain;
+using Common.F2FPay.Domain;
 using WeiXinPaySDK;
 
-namespace Beefun.F2FPay.Weixin
+namespace Common.F2FPay.Weixin
 {
     public class WeixinTradeService : IF2FTradeService
     {

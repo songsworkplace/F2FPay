@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Aop.Api.Domain;
 
-namespace Beefun.F2FPay
+namespace Common.F2FPay
 {
     /// <summary>
     /// 高级加密标准（英语：Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。

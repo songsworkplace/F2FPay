@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beefun.F2FPay
+namespace Common.F2FPay
 {
     /// <summary>
     /// 面对面支付模块异常

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
-namespace Beefun.F2FPay.AliPay.Domain
+namespace Common.F2FPay.AliPay.Domain
 {
     public class AlipayDTO
     {

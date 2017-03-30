@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Aop.Api;
 
-namespace Beefun.F2FPay.AliPay
+namespace Common.F2FPay.AliPay
 {
     public class AlipayClient
     {

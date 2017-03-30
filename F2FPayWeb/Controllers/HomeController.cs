@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-using Beefun.F2FPay;
-using Beefun.F2FPay.AliPay;
-using Beefun.F2FPay.AliPay.Domain;
-using Beefun.F2FPay.Domain;
-using Beefun.F2FPay.Weixin;
+using Common.F2FPay;
+using Common.F2FPay.AliPay;
+using Common.F2FPay.AliPay.Domain;
+using Common.F2FPay.Domain;
+using Common.F2FPay.Weixin;
 
 namespace F2FPayWeb.Controllers
 {

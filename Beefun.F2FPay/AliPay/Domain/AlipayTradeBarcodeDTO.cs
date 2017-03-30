@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Beefun.F2FPay.AliPay.Model;
+using Common.F2FPay.AliPay.Model;
 
-namespace Beefun.F2FPay.AliPay.Domain
+namespace Common.F2FPay.AliPay.Domain
 {
     public class AlipayTradeBarcodeDTO : AlipayDTO
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beefun.F2FPay.Domain
+namespace Common.F2FPay.Domain
 {
     /// <summary>
     /// 退款查询

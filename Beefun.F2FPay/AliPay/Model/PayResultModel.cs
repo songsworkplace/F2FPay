@@ -1,6 +1,6 @@
 ﻿//using System.Linq;
 
-namespace Beefun.F2FPay.AliPay.Model
+namespace Common.F2FPay.AliPay.Model
 {
     public  class ResultCode
     {

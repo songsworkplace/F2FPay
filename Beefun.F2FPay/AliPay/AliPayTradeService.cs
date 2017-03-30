@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using Aop.Api;
 using Aop.Api.Request;
 using Aop.Api.Response;
-using Beefun.F2FPay.AliPay.Domain;
-using Beefun.F2FPay.AliPay.Model;
-using Beefun.F2FPay.Domain;
+using Common.F2FPay.AliPay.Domain;
+using Common.F2FPay.AliPay.Model;
+using Common.F2FPay.Domain;
 
-namespace Beefun.F2FPay.AliPay
+namespace Common.F2FPay.AliPay
 {
     public class AliPayTradeService : IF2FTradeService
     {

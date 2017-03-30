@@ -7,7 +7,7 @@ using Aop.Api;
 using Aop.Api.Response;
 using WeiXinPaySDK;
 
-namespace Beefun.F2FPay.Domain
+namespace Common.F2FPay.Domain
 {
     public class OrderPayResult:BaseResult
     {

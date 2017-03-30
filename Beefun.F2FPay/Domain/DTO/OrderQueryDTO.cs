@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beefun.F2FPay.Domain
+namespace Common.F2FPay.Domain
 {
     /// <summary>
     /// 交易订单查询，支付，微信都支持

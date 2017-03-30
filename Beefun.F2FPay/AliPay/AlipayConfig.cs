@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Xml;
 
-namespace Beefun.F2FPay.AliPay
+namespace Common.F2FPay.AliPay
 {
     public class AlipayConfig
     {

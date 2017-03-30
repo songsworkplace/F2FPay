@@ -7,8 +7,8 @@
     <ProjectGuid>{13AF223C-0AFE-40B6-A5FC-55E191B421B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Beefun.F2FPay</RootNamespace>
-    <AssemblyName>Beefun.F2FPay</AssemblyName>
+    <RootNamespace>Common.F2FPay</RootNamespace>
+    <AssemblyName>Common.F2FPay</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

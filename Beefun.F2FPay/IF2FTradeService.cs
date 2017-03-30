@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Beefun.F2FPay.Domain;
+using Common.F2FPay.Domain;
 
-namespace Beefun.F2FPay
+namespace Common.F2FPay
 {
     public interface IF2FTradeService
     {

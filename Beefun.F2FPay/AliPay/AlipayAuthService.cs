@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Aop.Api;
 using Aop.Api.Request;
 using Aop.Api.Response;
-using Beefun.F2FPay.AliPay.Domain;
+using Common.F2FPay.AliPay.Domain;
 
-namespace Beefun.F2FPay.AliPay
+namespace Common.F2FPay.AliPay
 {
     /// <summary>
     /// 支付宝授权服务

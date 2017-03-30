@@ -1,4 +1,4 @@
-﻿namespace Beefun.F2FPay.AliPay.Model
+﻿namespace Common.F2FPay.AliPay.Model
 {
     /// <summary>
     /// GoodsInfo 的摘要说明

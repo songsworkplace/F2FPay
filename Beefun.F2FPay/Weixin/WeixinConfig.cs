@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Beefun.F2FPay.Weixin
+namespace Common.F2FPay.Weixin
 {
     public class WeixinConfig
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beefun.F2FPay.AliPay.Domain
+namespace Common.F2FPay.AliPay.Domain
 {
     public class AliPayTradeQueryDTO : AlipayDTO
     {

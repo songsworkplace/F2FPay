@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Aop.Api.Response;
 using WeiXinPaySDK;
 
-namespace Beefun.F2FPay.Domain
+namespace Common.F2FPay.Domain
 {
     public class RefundResult:BaseResult
     {

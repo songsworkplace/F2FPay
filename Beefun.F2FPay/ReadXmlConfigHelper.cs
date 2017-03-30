@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using Beefun.F2FPay.AliPay;
+using Common.F2FPay.AliPay;
 
-namespace Beefun.F2FPay
+namespace Common.F2FPay
 {
     public class ReadXmlConfigHelper
     {

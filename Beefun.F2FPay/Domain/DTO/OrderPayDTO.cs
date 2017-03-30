@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beefun.F2FPay.Domain
+namespace Common.F2FPay.Domain
 {
     /// <summary>
     /// 使用扫码设备读取用户手机支付宝“付款码”,支付宝和微信公共参数
