@@ -274,10 +274,10 @@ namespace Common.F2FPay.AliPay
                             //轮询结束后还是支付处理中，需要调撤销接口
                             if (queryResponse != null)
                             {
-                                if (queryResponse.TradeStatus == "WAIT_BUYER_PAY")
+                                if (queryResponse.TradeStatus == TradeStatus.WAIT_BUYER_PAY)
                                 {
                                     CancelAndRetry(barcodeDto.out_trade_no);
-                                    queryResponse.Code = ResultCode.FAIL;
+                                    queryResponse.TradeStatus = TradeStatus.TRADE_CLOSED;
                                     queryResponse.SubMsg = payResponse.SubMsg+"(等待时间过长，已经撤销支付订单)";
                                 }
                                 payResponse = toTradePayResponse(queryResponse);
@@ -295,12 +295,11 @@ namespace Common.F2FPay.AliPay
 
                             if (queryResponse2 != null)
                             {
-
                                 if (queryResponse2.TradeStatus == TradeStatus.WAIT_BUYER_PAY)
                                 {
                                     AlipayTradeCancelResponse cancelResponse = CancelAndRetry(barcodeDto.out_trade_no);
-                                    queryResponse2.Code = ResultCode.FAIL;
-                                    queryResponse2.SubMsg = payResponse.SubMsg + "(等待时间过长，已经撤销支付订单)";
+                                    queryResponse2.TradeStatus = TradeStatus.TRADE_CLOSED;
+                                    queryResponse2.SubMsg = queryResponse2.SubMsg + "(等待时间过长，已经撤销支付订单)";
                                 }
                                 payResponse = toTradePayResponse(queryResponse2);
                             }
@@ -320,7 +319,8 @@ namespace Common.F2FPay.AliPay
                         if (queryResponse3.TradeStatus == TradeStatus.WAIT_BUYER_PAY)
                         {
                             AlipayTradeCancelResponse cancelResponse = CancelAndRetry(barcodeDto.out_trade_no);
-                            queryResponse3.Code = ResultCode.FAIL;
+                            queryResponse3.TradeStatus = TradeStatus.TRADE_CLOSED;
+                            queryResponse3.SubMsg = queryResponse3.SubMsg + "(等待时间过长，已经撤销支付订单)";
                         }
                         payResponse = toTradePayResponse(queryResponse3);
                     }
